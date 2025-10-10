@@ -1,0 +1,136 @@
+/* File: src/components/PropertyCard/PropertyCard.css */
+
+/* Define the overall card container */
+.property-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Keeps image corners rounded */
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.property-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Image container with price overlay */
+.card-image-container {
+    position: relative;
+    width: 100%;
+    /* Aspect ratio for uniformity, e.g., 4:3 */
+    padding-top: 75%; 
+    overflow: hidden;
+}
+
+.card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.property-card:hover .card-image {
+    transform: scale(1.05);
+}
+
+/* Price Tag Styling (optional, as price isn't visible in the image, but kept from JSX) */
+.card-price {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #3498db; /* Blue background */
+    color: white;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.9em;
+    z-index: 10;
+}
+
+/* Info Section */
+.card-info {
+    padding: 20px;
+    flex-grow: 1; /* Allows this section to take up remaining height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-info h3 {
+    font-size: 1.5em;
+    color: #1f2a38;
+    margin: 0 0 8px 0;
+}
+
+.card-location {
+    color: #4a6572;
+    font-size: 1em;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.icon-map {
+    color: #4a6572;
+    margin-right: 5px;
+}
+
+/* Details Section (Beds, Baths, Sqft) */
+.card-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.95em;
+    color: #1f2a38;
+    font-weight: 500;
+    padding: 0 5px;
+}
+
+.detail-icon {
+    color: #3498db; /* Blue icon color */
+    margin-right: 5px;
+    font-size: 1.1em;
+}
+
+/* CTA Button (matches the yellow button in your example) */
+.card-cta {
+    /* Critical: Ensures Link acts like a block-level button */
+    display: block; 
+    
+    width: 100%;
+    padding: 12px;
+    background-color: #FFD700; /* Bright yellow */
+    color: #1f2a38;
+    
+    /* Ensure no border remains from the original <button> tag */
+    border: none; 
+    
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center; /* Center the "View Details" text */
+    text-decoration: none; /* Remove underline from Link */
+    transition: background-color 0.3s;
+    
+    /* Make sure there are no negative margins or positioning that could overlap */
+    margin-top: 20px; 
+}
+
+.card-cta:hover {
+    background-color: #e6c200; /* Darker yellow on hover */
+}

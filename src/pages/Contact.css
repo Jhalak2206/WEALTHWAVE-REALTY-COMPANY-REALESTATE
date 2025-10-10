@@ -1,0 +1,35 @@
+/* File: src/pages/Contact.css */
+
+.contact-page {
+    text-align: center;
+    padding: 40px 20px 80px;
+    background-color: #f4f7f9; /* Light background for the page */
+}
+
+.contact-page h1 {
+    color: #1f2a38;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+.contact-page p {
+    color: #4a6572;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.contact-info-details {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.contact-info-details h3 {
+    color: #1f2a38;
+    margin-bottom: 10px;
+}
+
+.contact-info-details p {
+    color: #4a6572;
+    margin: 5px 0;
+}

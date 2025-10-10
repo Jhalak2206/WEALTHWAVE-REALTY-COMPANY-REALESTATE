@@ -1,0 +1,158 @@
+/* --- Base Page Layout --- */
+.guides-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px 60px 20px;
+}
+
+/* --- 1. Hero Section Styling --- */
+.guides-hero {
+    background-color: #f4f6f8; /* Light background for contrast */
+    padding: 60px 40px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.guides-title {
+    font-size: 2.8rem;
+    color: #004d40; /* Deep Teal/Green for a finance feel */
+    margin-bottom: 10px;
+}
+
+.guides-subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* --- 2. Guides List (Cards) Layout --- */
+.guides-list {
+    display: grid;
+    /* Uses a grid system: three columns on large screens, two on medium, one on mobile */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.guide-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.guide-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.guide-card-content {
+    padding: 25px;
+}
+
+.guide-category {
+    display: inline-block;
+    background-color: #e0f2f1; /* Light teal background */
+    color: #004d40;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.guide-card-title {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.guide-card-summary {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* --- 3. Download Button Styling --- */
+.guide-download-btn {
+    display: inline-block;
+    background-color: #00796b; /* Primary Action Color (Dark Teal) */
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.guide-download-btn:hover {
+    background-color: #004d40;
+    transform: translateY(-1px);
+}
+
+.guide-meta {
+    background-color: #f9f9f9;
+    padding: 15px 25px;
+    border-top: 1px solid #eee;
+    font-size: 0.85rem;
+    color: #999;
+}
+
+/* --- 4. Call-to-Action (CTA) Section --- */
+.guides-cta {
+    background-color: #004d40;
+    color: #ffffff;
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 8px;
+    margin-top: 50px;
+}
+
+.guides-cta h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.guides-cta p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.guides-contact-btn {
+    display: inline-block;
+    background-color: #ffc107; /* Bright Accent Color (Gold/Yellow) */
+    color: #333;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: background-color 0.2s;
+}
+
+.guides-contact-btn:hover {
+    background-color: #ff9800;
+}
+
+/* --- 5. Media Queries for Responsiveness --- */
+@media (max-width: 768px) {
+    .guides-hero {
+        padding: 40px 20px;
+    }
+    
+    .guides-title {
+        font-size: 2rem;
+    }
+
+    .guides-list {
+        /* On smaller screens, only show one column */
+        grid-template-columns: 1fr;
+    }
+}

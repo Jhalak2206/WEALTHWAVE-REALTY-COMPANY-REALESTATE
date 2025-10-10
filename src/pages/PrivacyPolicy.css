@@ -1,0 +1,108 @@
+/* --- src/pages/PrivacyPolicy.css --- */
+
+/* --- General Layout and Container --- */
+.privacy-page {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px 80px;
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* --- Header and Title --- */
+.privacy-header {
+    margin-bottom: 40px;
+    border-bottom: 3px solid #3498db; /* Blue accent line */
+    padding-bottom: 15px;
+}
+
+.privacy-title {
+    font-size: 2.5rem;
+    color: #2c3e50; /* Dark title color */
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.privacy-subtitle {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* --- Content Styling --- */
+.privacy-content p {
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+}
+
+/* Section Headings (2. How We Use Your Information) */
+.policy-section h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #ccc;
+}
+
+/* Sub-Headings (A. Information Collected Directly from You) */
+.policy-section h3 {
+    font-size: 1.3rem;
+    color: #3498db; /* Blue text */
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Lists */
+.policy-section ul {
+    margin-bottom: 20px;
+    padding-left: 30px;
+    /* Use a clear, professional list style */
+    list-style-type: disc; 
+}
+
+.policy-section li {
+    margin-bottom: 10px;
+}
+
+/* --- Contact Section --- */
+.contact-section {
+    padding-top: 20px;
+    border-top: 2px solid #ddd;
+    margin-top: 40px;
+}
+
+.contact-details p {
+    margin: 5px 0;
+}
+
+.contact-details a {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+/* --- Legal Note --- */
+.legal-note {
+    margin-top: 50px;
+    padding: 15px;
+    border: 1px solid #ffcc00; /* Yellow warning border */
+    background-color: #fffacd; /* Light yellow background */
+    color: #555;
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .privacy-page {
+        padding: 0 15px 50px;
+    }
+
+    .privacy-title {
+        font-size: 2rem;
+    }
+
+    .policy-section h2 {
+        font-size: 1.6rem;
+    }
+}

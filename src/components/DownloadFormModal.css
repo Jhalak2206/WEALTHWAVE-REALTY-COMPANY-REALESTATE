@@ -1,0 +1,84 @@
+/* File: src/components/DownloadFormModal.css */
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: center;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #999;
+}
+
+.modal-content h3 {
+    color: #004d40;
+    margin-bottom: 5px;
+}
+
+.modal-guide-title {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.download-form {
+    margin-top: 20px;
+}
+
+.download-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.download-form button {
+    width: 100%;
+    background-color: #ffc107; /* Gold/Yellow accent */
+    color: #333;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.download-form button:hover:not(:disabled) {
+    background-color: #ff9800;
+}
+
+.download-form button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

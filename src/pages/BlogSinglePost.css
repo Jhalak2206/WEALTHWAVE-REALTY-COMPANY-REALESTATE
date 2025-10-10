@@ -1,0 +1,95 @@
+/* --- BlogSinglePost.css --- */
+
+/* Main Article Container */
+.blog-post-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px 80px;
+    font-family: Arial, sans-serif;
+}
+
+/* <h1> Title - Crucial for SEO */
+.post-header {
+    margin-bottom: 30px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.post-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    line-height: 1.2;
+    margin-top: 0;
+}
+
+/* Metadata (Date, Author, etc.) */
+.post-meta {
+    font-size: 0.95rem;
+    color: #888;
+}
+
+/* Article Body - <article> tag */
+.post-body {
+    line-height: 1.7;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Paragraphs */
+.post-body p {
+    margin-bottom: 20px;
+}
+
+/* <h2> Subheadings - Crucial for content structure and secondary keywords */
+.post-body h2 {
+    font-size: 1.8rem;
+    color: #3498db; /* Blue accent */
+    margin-top: 40px;
+    margin-bottom: 15px;
+    border-left: 5px solid #FFD700; /* Gold accent */
+    padding-left: 10px;
+}
+
+/* Lists */
+.post-body ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    list-style-type: square;
+}
+
+.post-body li {
+    margin-bottom: 8px;
+}
+
+/* Utility for the summary paragraph */
+.post-summary {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin: 20px 0 30px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-left: 5px solid #3498db;
+}
+
+/* Keywords/Tags Footer */
+.post-tags {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px dashed #ccc;
+    font-size: 0.9rem;
+}
+
+.post-tags .tag {
+    display: inline-block;
+    background-color: #eee;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+/* Error/Loading States */
+.post-404, .post-loading {
+    text-align: center;
+    padding: 100px 20px;
+    color: #e74c3c;
+}

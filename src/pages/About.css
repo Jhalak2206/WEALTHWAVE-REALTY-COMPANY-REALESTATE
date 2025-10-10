@@ -1,0 +1,42 @@
+/* File: src/pages/About.css */
+
+.about-page {
+    /* Set a clean background for the entire page */
+    background-color: #f5f5f5; 
+    min-height: 80vh;
+}
+
+.about-content-section {
+    padding: 80px 5%;
+    text-align: center;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Styles for the logo inside the content */
+.content-logo {
+    max-width: 250px; 
+    height: auto;
+    margin: 0 auto 30px auto; 
+    display: block;
+}
+
+.about-content-section p {
+    max-width: 800px;
+    margin: 15px auto;
+    font-size: 1.1em;
+    color: #333;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .about-content-section {
+        padding: 50px 15px; 
+    }
+    .content-logo {
+        max-width: 180px; 
+        margin-bottom: 20px;
+    }
+}

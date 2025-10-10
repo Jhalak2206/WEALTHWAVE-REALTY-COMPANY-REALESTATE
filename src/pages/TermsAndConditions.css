@@ -1,0 +1,50 @@
+/* File: src/pages/TermsAndConditions.css */
+
+.tc-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.tc-header {
+    margin-bottom: 40px;
+    border-bottom: 2px solid #004d40; /* Dark green line to match brand */
+    padding-bottom: 15px;
+}
+
+.tc-header h1 {
+    font-size: 2.5rem;
+    color: #004d40; 
+    margin-bottom: 5px;
+}
+
+.tc-header p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.tc-section {
+    margin-bottom: 30px;
+}
+
+.tc-section h2 {
+    font-size: 1.6rem;
+    color: #004d40;
+    margin-bottom: 15px;
+    padding-top: 10px;
+}
+
+.tc-section ul {
+    list-style: disc inside;
+    padding-left: 20px;
+}
+
+.tc-section ul li {
+    margin-bottom: 10px;
+}
+
+.tc-section strong {
+    font-weight: 700;
+}

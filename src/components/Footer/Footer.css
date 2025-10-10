@@ -1,0 +1,123 @@
+/* File: src/components/Footer/Footer.css */
+
+.footer {
+    /* Background color matching the image: Dark blue/grey */
+    background-color: #34495E; 
+    color: #ECF0F1; /* Light text color */
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-family: sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    /* Adjust max-width to match your main container, e.g., 1200px */
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap; /* Allows sections to wrap on smaller screens */
+}
+
+/* Common Header/Title Styling */
+.footer-section h3 {
+    color: #3498db; /* Blue accent color for headings */
+    font-size: 1.25em;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Individual Section Styling */
+.footer-section {
+    margin-bottom: 30px;
+    /* Base width for desktop layout (approx 25% for 4 columns) */
+    width: 20%; 
+    min-width: 200px; /* Prevents shrinking too much */
+}
+
+/* 1. Brand and Contact Info */
+.brand-info p {
+    font-size: 0.9em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #BDC3C7;
+}
+
+.brand-info .contact-details {
+    margin-top: 15px;
+}
+
+/* 2 & 3. Quick Links & Resources */
+.quick-links ul, .resources ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-links li, .resources li {
+    margin-bottom: 8px;
+}
+
+.quick-links a, .resources a {
+    color: #BDC3C7;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s;
+}
+
+.quick-links a:hover, .resources a:hover {
+    color: #3498db; /* Blue hover effect */
+}
+
+
+/* 4. Social Media */
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #ECF0F1; /* White icons */
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #3498db; /* Blue hover effect */
+}
+
+/* Footer Bottom (Copyright) */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    padding: 15px 0 0;
+    font-size: 0.8em;
+    color: #BDC3C7;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+    .footer-content {
+        justify-content: space-around;
+        gap: 20px;
+    }
+    .footer-section {
+        width: 45%; /* Two columns on medium screens */
+        min-width: unset;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-section {
+        width: 100%; /* One column on small screens */
+        text-align: center;
+    }
+    .footer-section h3 {
+        text-align: center;
+    }
+    /* Center the social links */
+    .social-links {
+        justify-content: center;
+    }
+}
