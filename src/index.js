@@ -1,18 +1,29 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-// Check the path here: should be correct based on your successful compilation
-import './styles/Global.css'; 
-import App from './App.js'; // Ensure the .js extension is correct
+// 🛑 CRITICAL FIX: Ensure you import from the root 'react-dom' 
+// for react-snap's required functions (hydrate, render)
+import { hydrate, render } from 'react-dom'; 
+
+import './styles/Global.css';
+import App from './App.js';
 import reportWebVitals from './reportWebVitals';
 
-// 🎯 CRITICAL LINE: Finds the 'root' element from public/index.html
-const root = ReactDOM.createRoot(document.getElementById('root'));
-
-// Renders the App component into the root element
-root.render(
+// 🎯 CRITICAL: Check if the 'root' element already has children (i.e., pre-rendered content).
+const rootElement = document.getElementById('root');
+const AppToRender = (
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
 
+if (rootElement.hasChildNodes()) {
+  // If pre-rendered HTML is present, use hydrate to attach event listeners.
+  // This uses the compatibility layer expected by react-snap.
+  hydrate(AppToRender, rootElement);
+} else {
+  // Otherwise, perform a normal client-side render.
+  render(AppToRender, rootElement);
+}
+
+// Ensure your 'serviceWorker.unregister()' is called here if you have one.
+// serviceWorker.unregister();
 reportWebVitals();

@@ -1,86 +1,75 @@
-// BlogSinglePost.js (The final, complete component with Rich Text integration)
-
+// File: src/pages/BlogSinglePost.js
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-
-// ✅ Corrected import paths assuming files are in src/utils/
-import { getEntryBySlug } from '../utils/contentfulClient'; 
-import RichTextRenderer from '../utils/RichTextRenderer'; 
-
-import './BlogSinglePost.css'; 
+import { useParams, Link } from 'react-router-dom';
+import { getEntryBySlug } from '../utils/contentfulAPI';
+import RichTextRenderer from '../utils/RichTextRenderer';
+import { Helmet } from 'react-helmet';
+import './BlogSinglePost.css';
 
 const BlogSinglePost = () => {
-    // 1. Get the slug from the dynamic route '/blog/:slug'
-    const { slug } = useParams(); 
-    
-    const [post, setPost] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+  const { slug } = useParams();
+  const [post, setPost] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-    useEffect(() => {
-        // Reset state for a clean fetch
-        setLoading(true);
-        setError(null);
-        setPost(null);
+  useEffect(() => {
+    const fetchPost = async () => {
+      setLoading(true);
+      setError(null);
+      const data = await getEntryBySlug(slug);
 
-        if (slug) {
-            // 🎯 CRUCIAL PART: Use the Contentful helper function
-            getEntryBySlug(slug) 
-                .then(entry => {
-                    if (entry) {
-                        // Contentful returns the actual entry object. We store the 'fields'.
-                        setPost(entry.fields); 
-                    } else {
-                        // If Contentful returns no entry for the slug
-                        setError("Article not found.");
-                    }
-                })
-                .catch(err => {
-                    console.error("Contentful fetch failed:", err);
-                    setError("A network or API error occurred.");
-                })
-                .finally(() => {
-                    setLoading(false);
-                });
-        }
-            
-    // Dependency array ensures this runs only when the slug changes.
-    }, [slug]); 
+      if (data) {
+        setPost(data);
+      } else {
+        setError('Article not found.');
+      }
 
-    // --- Conditional Rendering (Loading/Error States) ---
-    
-    if (loading) {
-        return <h1 className="post-loading">Loading Content...</h1>;
-    }
-    
-    // Check for local error state OR if the post data is missing
-    if (error || !post) {
-        return <h1 className="post-404">404 - Article Not Found: {error}</h1>;
-    }
+      setLoading(false);
+    };
 
-    // Access the fields from the stored 'post' object
-    // Assuming 'body' is the Rich Text field ID in Contentful
-    const { title, date, body } = post; 
+    if (slug) fetchPost();
+  }, [slug]);
 
-    // --- Final Render ---
-    return (
-        <div className="blog-post-container">
-            <header className="post-header">
-                {/* H1 is the primary SEO signal */}
-                <h1 className="post-title">{title}</h1> 
-                <div className="post-meta">
-                    {/* Ensure 'date' field is correctly provided by Contentful */}
-                    <time dateTime={date}>🗓️ {new Date(date).toLocaleDateString()}</time>
-                </div>
-            </header>
-            
-            <article className="post-body">
-                {/* 🎯 The Rich Text rendering is now clean and correct */}
-                {body && <RichTextRenderer content={body} />}
-                
-            </article>
+  if (loading) return <h1 className="post-loading">Loading Content...</h1>;
+  if (error || !post) return <h1 className="post-404">404 - {error}</h1>;
+
+  const { title, date, body, summary } = post;
+
+  return (
+    <div className="blog-post-container">
+      {/* SEO Meta Tags */}
+      <Helmet>
+        <title>{title} | WealthWave Realty Blog</title>
+        <meta
+          name="description"
+          content={summary || `Read this article on WealthWave Realty Blog: ${title}`}
+        />
+        <link rel="canonical" href={`https://wealthwaverealty.in/blog/${slug}`} />
+      </Helmet>
+
+      <header className="post-header">
+        <h1 className="post-title">{title}</h1>
+        <div className="post-meta">
+          <time dateTime={date}>🗓️ {new Date(date).toLocaleDateString()}</time>
         </div>
-    );
+      </header>
+
+      <article className="post-body">
+        {body && <RichTextRenderer content={body} />}
+
+        {/* Internal Linking for SEO */}
+        <section className="post-internal-links">
+          <h3>Explore More</h3>
+          <p>
+            Interested in premium properties? <Link to="/properties">View our listings</Link> or check out our <Link to="/guides">investment guides</Link>.
+          </p>
+          <p>
+            Learn more <Link to="/about">about WealthWave Realty</Link> or <Link to="/contact">get in touch</Link> today.
+          </p>
+        </section>
+      </article>
+    </div>
+  );
 };
 
 export default BlogSinglePost;

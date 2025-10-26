@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaSearch, FaHome, FaChartLine, FaHandshake } from 'react-icons/fa'; // Added FaHandshake for a fourth icon
 import './Home.css';
 
+
 const Home = () => {
   return (
     <div className="home-page">

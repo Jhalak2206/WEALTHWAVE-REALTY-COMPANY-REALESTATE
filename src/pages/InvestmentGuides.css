@@ -30,7 +30,6 @@
 /* --- 2. Guides List (Cards) Layout --- */
 .guides-list {
     display: grid;
-    /* Uses a grid system: three columns on large screens, two on medium, one on mobile */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     padding: 20px 0;
@@ -80,6 +79,8 @@
 
 /* --- 3. Download Button Styling --- */
 .guide-download-btn {
+    border: none; /* Removes the default grey button border */
+    cursor: pointer; /* Ensures the cursor changes to a pointer */
     display: inline-block;
     background-color: #00796b; /* Primary Action Color (Dark Teal) */
     color: #ffffff;
@@ -146,13 +147,12 @@
     .guides-hero {
         padding: 40px 20px;
     }
-    
+
     .guides-title {
         font-size: 2rem;
     }
 
     .guides-list {
-        /* On smaller screens, only show one column */
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* On smaller screens, only show one column */
     }
 }

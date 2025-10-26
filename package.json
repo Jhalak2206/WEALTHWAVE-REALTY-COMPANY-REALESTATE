@@ -10,10 +10,11 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.12.2",
     "contentful": "^11.8.5",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
     "react-icons": "^5.5.0",
-    "react-router-dom": "^7.9.3",
+    "react-router-dom": "^6.0.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -22,7 +23,8 @@
     "build": "npm run generate-sitemap && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "generate-sitemap": "node generate-sitemap.js"
+    "generate-sitemap": "node generate-sitemap.js",
+    "postbuild": "react-snap"
   },
   "eslintConfig": {
     "extends": [
@@ -41,5 +43,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "reactSnap": {
+    "include": [
+      "/terms"
+    ],
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ],
+    "waitForSelector": ".blog-post-content" 
+  },
+  "devDependencies": {
+    "react-snap": "^1.23.0"
   }
 }

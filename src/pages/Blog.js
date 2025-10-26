@@ -1,16 +1,13 @@
+// File: src/pages/Blog.js
+
 import React from 'react';
-// ----------------------------------------------------
-// ✅ FIX: Import Link from 'react-router-dom'
 import { Link } from 'react-router-dom'; 
-// ----------------------------------------------------
 import './Blog.css';
+import { Helmet } from "react-helmet";
 
-
-// Placeholder data for blog posts (Updated)
+// Placeholder data for blog posts (SEO-friendly slugs)
 const blogPosts = [
     { 
-        // ❌ Removed: id: 1, 
-        // ✅ Added: SEO-friendly slug
         slug: "noida-jewar-effect-real-estate-surge", 
         title: "🚀 Noida's Real Estate is Surging! The Jewar Effect is Real.", 
         summary: "Jewar Airport fuels massive wealth growth—plots up 536%, apartments up 158%, redefining investment potential.", 
@@ -18,38 +15,55 @@ const blogPosts = [
         category: "Market Trends" 
     },
     { 
-        // ❌ Removed: id: 2, 
-        // ✅ Added: SEO-friendly slug
         slug: "noida-airport-set-to-take-off-october-30", 
         title: "✈️ Noida International Airport Set to Take Off on October 30 — A Game Changer for NCR Real Estate", 
         summary: "Jewar Airport’s October 30 inauguration transforms NCR—boosting connectivity, real estate, logistics, and investment opportunities.", 
         date: "Sep 23, 2025", 
         category: "Market Trends" 
     },
-    // ... rest of the posts
+    // Add other posts here
 ];
 
 const Blog = () => {
   return (
     <div className="blog-page">
-      {/* ... other JSX ... */}
+
+      {/* SEO Meta Tags */}
+      <Helmet>
+        <title>Real Estate Blog | WealthWave Realty</title>
+        <meta name="description" content="Stay updated with the latest real estate trends, investment guides, and property insights in Noida and NCR from WealthWave Realty." />
+        <link rel="canonical" href="https://wealthwaverealty.in/blog" />
+      </Helmet>
+
       <div className="blog-content-container">
         <main className="blog-main">
           {blogPosts.map(post => (
-            // Use the slug as the key (since it's unique)
             <article key={post.slug} className="blog-post-card">
-              {/* This Link is CRITICAL for SEO URLs! */}
+              {/* Blog Post Title Link */}
               <Link to={`/blog/${post.slug}`} className="post-link">
                 <h2>{post.title}</h2>
               </Link>
-              {/* ... meta and summary ... */}
+              {/* Blog Summary */}
               <p>{post.summary}</p>
-              {/* The read more button also uses the slug */}
+              {/* Read More Button */}
               <Link to={`/blog/${post.slug}`} className="read-more-btn">Read Full Article &rarr;</Link>
             </article>
           ))}
+
+          {/* Optional Internal Linking Section */}
+          <section className="internal-links">
+            <h3>Explore More</h3>
+            <p>
+              Check out our <Link to="/properties">property listings</Link> or learn how to maximize your ROI with our <Link to="/guides">investment guides</Link>.
+            </p>
+            <p>
+              Want to know more about us? <Link to="/about">About WealthWave Realty</Link> or <Link to="/contact">get in touch</Link> today.
+            </p>
+          </section>
+
         </main>
-        {/* ... sidebar ... */}
+
+        {/* Optional Sidebar could go here */}
       </div>
     </div>
   );

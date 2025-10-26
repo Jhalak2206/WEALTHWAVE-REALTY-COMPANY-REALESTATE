@@ -1,78 +1,92 @@
+// File: src/pages/PrivacyPolicy.js
+
 import React from 'react';
-import './PrivacyPolicy.css'; // You should create this CSS file next!
+import './PrivacyPolicy.css';
+import { Helmet } from "react-helmet";
+import { Link } from 'react-router-dom';
 
 const PrivacyPolicy = () => {
   return (
     <div className="privacy-page">
+      
+      {/* SEO meta tags */}
+      <Helmet>
+        <title>Privacy Policy | WealthWave Realty</title>
+        <meta 
+          name="description" 
+          content="Read WealthWave Realty's Privacy Policy to understand how we collect, use, and protect your data while providing premium real estate services in Noida and Greater Noida." 
+        />
+        <link rel="canonical" href="https://wealthwaverealty.in/privacy-policy" />
+      </Helmet>
+
       <header className="privacy-header">
         <h1 className="privacy-title">Privacy Policy</h1>
         <p className="privacy-subtitle">Last Updated: October 9, 2025</p>
       </header>
 
       <main className="privacy-content">
-        <p>This Privacy Policy describes how **Wealthwave Realty** ("we," "us," or "our") collects, uses, and discloses information that we obtain about visitors to our website (wealthwaverealty.com) and the services available through our site.</p>
+        <p>This Privacy Policy describes how <strong>Wealthwave Realty</strong> ("we," "us," or "our") collects, uses, and discloses information that we obtain about visitors to our website (<Link to="/">wealthwaverealty.in</Link>) and the services available through our site.</p>
 
         <section className="policy-section">
           <h2>1. Information We Collect</h2>
           <p>We collect information directly from you, automatically through your use of our website, and from third-party sources.</p>
 
           <h3>A. Information Collected Directly from You</h3>
-          <p>We collect information when you voluntarily provide it to us, such as when you:</p>
+          <p>We collect information when you voluntarily provide it, such as when you:</p>
           <ul>
-            <li>Use the **"Get Free Consultation"** button or contact form.</li>
-            <li>Subscribe to our market blog or insights newsletter.</li>
+            <li>Use the <Link to="/contact">"Get Free Consultation"</Link> button or contact form.</li>
+            <li>Subscribe to our <Link to="/blog">market blog</Link> or insights newsletter.</li>
             <li>Contact us via email or phone.</li>
           </ul>
           <p>This information may include:</p>
           <ul>
-            <li>**Contact Information:** Name, email address, phone number.</li>
-            <li>**Consultation Details:** Property interests, investment budget, location preferences, and any other information you choose to provide.</li>
+            <li><strong>Contact Information:</strong> Name, email, phone number.</li>
+            <li><strong>Consultation Details:</strong> Property interests, investment budget, location preferences, and other information you provide.</li>
           </ul>
 
           <h3>B. Information Collected Automatically</h3>
-          <p>We automatically collect the following types of information about your use of our website through cookies and other tracking technologies:</p>
+          <p>We automatically collect data via cookies and tracking technologies:</p>
           <ul>
-            <li>**Usage Data:** Pages viewed, time spent on our site, links clicked, and your interactions with our content.</li>
-            <li>**Device Data:** IP address, browser type, operating system, and unique device identifiers.</li>
+            <li><strong>Usage Data:</strong> Pages viewed, time spent, clicks, and interactions.</li>
+            <li><strong>Device Data:</strong> IP address, browser, OS, and unique device identifiers.</li>
           </ul>
         </section>
 
         <section className="policy-section">
           <h2>2. How We Use Your Information</h2>
-          <p>We use the information we collect for the following business purposes:</p>
           <ul>
-            <li>**To Provide Services:** To fulfill your requests, such as scheduling consultations, responding to inquiries, and providing requested property listings.</li>
-            <li>**Marketing and Communications:** To send you our market blog, investment guides, promotional materials, and information about properties we believe may interest you.</li>
-            <li>**Website Improvement:** To understand how users access and use our website, and to improve our website's performance and design.</li>
-            <li>**Legal Compliance:** To comply with applicable legal obligations, including responding to legal processes and requests.</li>
+            <li><strong>To Provide Services:</strong> Fulfilling requests, scheduling consultations, and providing property listings.</li>
+            <li><strong>Marketing & Communications:</strong> Sending blog updates, investment guides, promotions, and property info.</li>
+            <li><strong>Website Improvement:</strong> Understanding usage patterns to improve performance and design.</li>
+            <li><strong>Legal Compliance:</strong> Responding to legal requests and obligations.</li>
           </ul>
         </section>
 
         <section className="policy-section">
           <h2>3. Disclosure of Your Information</h2>
-          <p>We will not sell or rent your personal information to third parties. We may disclose your information to the following entities:</p>
+          <p>We will not sell or rent your personal information. Disclosures may occur to:</p>
           <ul>
-            <li>**Service Providers:** Third-party vendors and consultants who perform services on our behalf, such as email delivery services, website hosting, and analytics providers.</li>
-            <li>**Business Partners (Real Estate):** Trusted real estate agents, legal counsel, or financial advisors who assist us in providing the specific services or properties you request.</li>
+            <li><strong>Service Providers:</strong> Vendors who perform services like hosting, analytics, or email delivery.</li>
+            <li><strong>Business Partners:</strong> Trusted real estate agents, legal counsel, or financial advisors.</li>
           </ul>
         </section>
 
         <section className="policy-section">
           <h2>4. Cookies and Tracking Technologies</h2>
-          <p>We use cookies (small files placed on your device) to collect information automatically. You have the option to accept or decline cookies. Most web browsers automatically accept cookies, but this may prevent you from taking full advantage of the website.</p>
+          <p>We use cookies to collect information automatically. You may accept or decline cookies, though declining may limit some website features.</p>
         </section>
 
         <section className="policy-section">
           <h2>5. Your Rights and Choices</h2>
           <ul>
-            <li>**Marketing Opt-Out:** You may opt-out of marketing emails by following the unsubscribe instructions contained within the email.</li>
-            <li>**Access/Correction:** You may request access to the personal information we hold about you by contacting us directly.</li>
+            <li><strong>Marketing Opt-Out:</strong> Unsubscribe via links in emails.</li>
+            <li><strong>Access/Correction:</strong> Contact us to request your personal information.</li>
           </ul>
         </section>
 
         <section className="policy-section contact-section">
           <h2>6. Contact Us</h2>
-          <p>If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:</p>
+          <p>If you have questions about this Privacy Policy or our practices, reach out to us:</p>
           <address className="contact-details">
             <p><strong>Wealthwave Realty</strong></p>
             <p>Plot No. 21 & 21A, Sector 142, Noida, Uttar Pradesh 201304</p>

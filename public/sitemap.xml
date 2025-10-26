@@ -1,35 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://wealthwaverealty.in/</loc>
+    <lastmod>2025-10-26T06:57:01.070Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
 
   <url>
-    <loc>https://wealthwave-realty-firm.netlify.app/</loc>
-    <lastmod>2025-10-11T10:37:35.141Z</lastmod>
+    <loc>https://wealthwaverealty.in/properties</loc>
+    <lastmod>2025-10-26T06:57:01.071Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://wealthwaverealty.in/about</loc>
+    <lastmod>2025-10-26T06:57:01.071Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://wealthwaverealty.in/contact</loc>
+    <lastmod>2025-10-26T06:57:01.071Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://wealthwaverealty.in/blog</loc>
+    <lastmod>2025-10-26T06:57:01.071Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://wealthwave-realty-firm.netlify.app/about</loc>
-    <lastmod>2025-10-11T10:37:35.142Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://wealthwaverealty.in/guides</loc>
+    <lastmod>2025-10-26T06:57:01.071Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://wealthwave-realty-firm.netlify.app/projects</loc>
-    <lastmod>2025-10-11T10:37:35.142Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://wealthwaverealty.in/privacy-policy</loc>
+    <lastmod>2025-10-26T06:57:01.071Z</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
+
   <url>
-    <loc>https://wealthwave-realty-firm.netlify.app/contact</loc>
-    <lastmod>2025-10-11T10:37:35.142Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://wealthwaverealty.in/terms-and-conditions</loc>
+    <lastmod>2025-10-26T06:57:01.071Z</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
+
   <url>
-    <loc>https://wealthwave-realty-firm.netlify.app/blog</loc>
-    <lastmod>2025-10-11T10:37:35.142Z</lastmod>
+    <loc>https://wealthwaverealty.in/terms</loc>
+    <lastmod>2025-10-26T06:57:01.071Z</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://wealthwaverealty.in/blog/noida-international-airport-takeoff-october-30-ncr-real-estate</loc>
+    <lastmod>2025-10-26T06:57:01.158Z</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://wealthwaverealty.in/blog/noida-jewar-effect-real-estate-surge</loc>
+    <lastmod>2025-10-26T06:57:01.158Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 
 </urlset>
